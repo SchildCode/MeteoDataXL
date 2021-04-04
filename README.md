@@ -1,6 +1,6 @@
-# MetetDataXL
-MetetDataXL is a macro-enabled Microsoft Excel workbook.
-It enables simple and fast downloading of hourly weather data direct to Excel from met.no (Frost API, Norway only) and NIBIO (AgroMetBase, Norway and Sweden) and the Netatmo API (global). Advanced quality-checking and gap-filling.
+# MeteoDataXL
+MeteoDataXL is a macro-enabled Microsoft Excel workbook.
+It enables simple and fast downloading of hourly weather data direct to Excel from met.no (Frost API, Norway only) and NIBIO (AgroMetBase, Norway and Sweden) and the Netatmo API (global). Advanced quality-checking, gap-filling, and plotting.
 
 ### Features:
 - Dynamic menu, search for available parameters for a given station and/or dates, or search for available stations for a given parameter
@@ -13,15 +13,16 @@ It enables simple and fast downloading of hourly weather data direct to Excel fr
 - Hotkey CTRL+N jumps to the next period containing outlier values
 - Parameter-specific code for checking quality, e.g. checks relative humidity, dew-point and dry-bulb temperatures for equivalence
 - Special code for solar radiation (global, direct, or diffuse) including checking for incorrect time-stamp, correction for night-time calibration offset, automatic detection of obscuring features such as trees or masts that shade the pyranometer, and comparison with clear-sky irradiance (REST2-model)
+- Special code to compare both cumulative precipitation (synop code RA) and hourly measurements (code RR).
 - Visualizes the data (scatter-plot comparing with nearby stations) and carpet plot
 - Parameter-specific gap-filling, which prioritizes moving observations from best-fit nearby stations (kriging by regression), and if such data is unavailable then the gaps are filled by interpolation using a method similar to Kalman filter, which faithfully reproduces the diurnal profile.
 
 ### Licences:
-- The MetetDataXL workbook and source code is free closed-source (Lisence CC BY-ND 4.0): https://creativecommons.org/licenses/by-nd/4.0/
+- The MeteoDataXL workbook and source code is free closed-source (Lisence CC BY-ND 4.0): https://creativecommons.org/licenses/by-nd/4.0/
 - Data from Frost API can have different licenses depending on source. Most data is licensed under 'Norwegian license for public data' (NLOD) and Creative Commons 4.0 BY International: http://creativecommons.org/licenses/by/4.0/
 - Data from NIBIO Landbruksmeteorologisk tjeneste (LMT) AgroMetBase is lisenced under 'Norwegian license for public data' (NLOD): http://data.norge.no/nlod/
 - Publically available data fron Netatmo API is lisenced: https://dev.netatmo.com/legal
 
 ### Author:
-MetetDataXL written by Peter G. Schild, Oslo Metropitan University & SINTEF Community in the period 2008-2021.
+MeteoDataXL written by Peter G. Schild, Oslo Metropitan University & SINTEF Community in the period 2008-2021.
 Contact the author if you wish to adapt the code to connect to other APIs.
