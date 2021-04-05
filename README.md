@@ -1,5 +1,5 @@
 # MeteoDataXL
-MeteoDataXL is a macro-enabled Microsoft Excel workbook to access and process hourly meteorological data. It can download historical observations from Met.no (Frost API, Norway only), NIBIO (AgroMetBase API, Norway only), and Netatmo (Weather API, worldwide). Advanced quality-checking, gap-filling, and plotting.
+MeteoDataXL is a macro-enabled Microsoft Excel workbook for hourly meteorological observations. It can download historical observations directly from selected web services (Frost & AgroMetBase in Norway, and Netatmo's Weather API worldwide). Advanced quality-checking, gap-filling, and plotting.
 
 ### Features:
 - **Data sources**
@@ -39,6 +39,7 @@ MeteoDataXL is a macro-enabled Microsoft Excel workbook to access and process ho
   - **Solar radiation** data is given special treatment: 
     - (i) In addition to gap-filling, you are asked of wish to correct solar radiation measurements for systematic offset (zero-point calibration) by automatically analyzing the night-time offset. This offset is either a systematic error (incorrect logger voltage/grounding) or caused by clear-sky longwave radiation. Normally nighttime offset due to cold clear-sky radiation is negative, between -2 and -7 W/m², and can be ignored as it does not affect the daytime measurements. However, a positive nighttime offset is a sign of systematic error that probably also affects daytime readings, and can therfore be corrected if you wish.
     - (ii) When gap-filling solar radiation with no nearby stations, interpolatiion is based on cloud cover (not the traditional *clearness index*), with an adjustable traning period before and after the gap (small gaps have short training period). This approach has been adapted to work with both global and diffuse (shaded pyranometer) measurements.
+  - **User-functions**: A few handy user-defined worksheet functions are available for in-cell calculations. These are self-documented in the spreadsheet (Click on the 'fx' button in the Formula bar, and view the *User Functions* category.)
 
 ### Licences:
 - The MeteoDataXL workbook and source code is free closed-source (Lisence CC BY-ND 4.0): https://creativecommons.org/licenses/by-nd/4.0/
