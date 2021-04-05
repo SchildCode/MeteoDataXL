@@ -10,7 +10,7 @@ It enables simple and fast downloading of hourly weather data direct to Excel fr
   - You can also manually copy-paste data from any other source into the MeteoData spreadsheet, to use the quality-checking and gap-filling features. The time-zone is user-definable (sheet 'Options').
 
 - **Downloading data (button *'1:Download'*)**
-  - The yellow-coloured input cells *'Meteo stations'* and *'Parameters'* in worksheet 'Download' are dynamic. For example, if you type 'Near 59.9N,10.7E' or 'Near Oslo kommune' in cell 'Meteo stations', it returns a list of the nearest stations for a given latitude & longitude, municipality, or for a given meteo station. This function depends on which API you have choosen; for example, Frost API can search for available parameters for a given station and/or dates, or search for available stations that measure a given parameter. Each yellow input cell has pop-up comments explain input syntax. 
+  - The yellow-coloured input cells *'Meteo stations'* and *'Parameters'* in worksheet *'Download'* are dynamic. For example, if you type 'Near 59.9N,10.7E' or 'Near Oslo kommune' in cell 'Meteo stations', it returns a list of the nearest stations for a given latitude & longitude, municipality, or for a given meteo station. This function depends on which API you have choosen; for example, Frost API can search for available parameters for a given station and/or dates, or search for available stations that measure a given parameter. Each yellow input cell has pop-up comments explain input syntax. 
   - Practically an unlimited number of observations can be downloaded from the web services, i.e. many years, many stations, and multiple parameters.
   - For Frost API, MeteoDataXL also downloads the quality flag for each individual hour value. These quality flags are numbered 1-6 in the column to the right of the downloaded value. Spreadsheet 'Download' therefore has two columns for each meteo parameter (value-column, and green-coloured quality-column).
 
@@ -26,7 +26,7 @@ It enables simple and fast downloading of hourly weather data direct to Excel fr
     - View the data in the plotting sheets (see points below). Sheet 'Comparative plot' is especially useful for this purpose. 
 
 - **Plotting (sheets *'Comparative plot'* and *'Carpet plot'*)**
-  - **Sheet 'Comparative plot'** plots the time-series (x-axis = time, y-valus=value) for any chosen weather station/parameter and period (day, week, month, year). If sheet 'Download' contains data from multiple weather stations, then this plot superimposes the plots for the 4 nearest stations, and uncertain values are flagged (black dot for interpolated data, circle for values exceeding sigma threshold).
+  - **Sheet 'Comparative plot'** plots the time-series (x-axis = time, y-valus=value) for any chosen weather station/parameter and period (day, week, month, year). If sheet *'Download'* contains data from multiple weather stations, then this plot superimposes the plots for the 4 nearest stations, and uncertain values are flagged (black dot for interpolated data, circle for values exceeding sigma threshold).
   - **Sheet 'Carpet plot'** visualizes a carpet plot for any chosen weather station/parameter and period. x-axis is day, y-axis is hour of day, colour scale is value. Missing values are indicated.
 
 - **Automated gap-filling (button *'3:FillGaps'*)**
