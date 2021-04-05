@@ -9,12 +9,12 @@ It enables simple and fast downloading of hourly weather data direct to Excel fr
   - **Netatmo**'s web service 'Weather API' (https://dev.netatmo.com/apidocumentation/weather). MeteoDataXL accesses only outdoor observations (temperature, humidity, pressure, wind and rain), from over 170 counties. The service requires you to open and login to a Natatmo user-account (i.e. Oauth2 authentication). MeteodataXL uses API methods 'getpublicdata' and 'getmeasure', to locate nearly stations by latutude & longitude, and download their hourly observations. Be aware that Netato sensors may have non-ideal locations that seriously affect the measurements, e.g. unshaded outdoor montiors are affected by sunlight on sunny days.
   - You can also manually copy-paste data from any other source into the MeteoData spreadsheet, to use the quality-checking and gap-filling features. The time-zone is user-definable (sheet 'Options').
 
-- **Downloading data (button '1:Download')**
+- **Downloading data (button *'1:Download'*)**
   - The yellow-coloured input cells 'Meteo stations' and 'Parameters' in worksheet 'Download' are dynamic. For example, if you type 'Near 59.9N,10.7E' or 'Near Oslo kommune' in cell 'Meteo stations', it returns a list of the nearest stations for a given latitude & longitude, municipality, or for a given meteo station. This function depends on which API you have choosen; for example, Frost API can search for available parameters for a given station and/or dates, or search for available stations that measure a given parameter. Each yellow input cell has pop-up comments explain input syntax. 
   - Practically an unlimited number of observations can be downloaded from the web services, i.e. many years, many stations, and multiple parameters.
   - For Frost API, MeteoDataXL also downloads the quality flag for each individual hour value. These quality flags are numbered 1-6 in the column to the right of the downloaded value. Spreadsheet 'Download' therefore has two columns for each meteo parameter (value-column, and green-coloured quality-column).
 
-- **Automated quality-checking (button '2:Check')**
+- **Automated quality-checking (button *'2:Check'*)**
   - Vets data for sudden jumps in value, extremely high or low values, and static values (i.e. dead sensor). Uncertain values (exceeding the sigma threshold) are flagged in the green 'quality' column to the right of the observation value. The threshold sigma can be changed in sheet 'Options').
   - Also vets the data by comparing comparing observations with nearby stations that you have downloaded (e.g. if you have downloaded air temperature from two or more meteo stations). This generates two kinds of output (i) The 4 nearest stations are listed in a pop-up comment in row 3 of the green 'quality' column for each meteo station, with associated Pearson's correlation coefficient (*r*) and linear regression equation. (ii) Uncertain values (exceeding the sigma threshold) are flagged in the green 'quality' column to the right of the observation value.
   - Special checks are conducted for specific meteo parameters:
@@ -25,11 +25,11 @@ It enables simple and fast downloading of hourly weather data direct to Excel fr
     - Check-out the green 'quality' column for each parameter. This can be speeded up with hotkey "CTRL+N" to find the next outlier in the sheet. The first time you key CTRL+N finds the most extreme value in the sheet. The second time you press CTRL+N finds the second-most extreme value, etc.
     - View the data in the plotting sheets (see points below). Sheet 'Comparative plot' is especially useful for this purpose. 
 
-- **Plotting (sheets 'Comparative plot' and 'Carpet plot')**
+- **Plotting (sheets *'Comparative plot'* and *'Carpet plot'*)**
   - **Sheet 'Comparative plot'** plots the time-series (x-axis = time, y-valus=value) for any chosen weather station/parameter and period (day, week, month, year). If sheet 'Download' contains data from multiple weather stations, then this plot superimposes the plots for the 4 nearest stations, and uncertain values are flagged (black dot for interpolated data, circle for values exceeding sigma threshold).
   - **Sheet 'Carpet plot'** visualizes a carpet plot for any chosen weather station/parameter and period. x-axis is day, y-axis is hour of day, colour scale is value. Missing values are indicated.
 
-- **Automated gap-filling (button '3:FillGaps')**
+- **Automated gap-filling (button *'3:FillGaps'*)**
   - MeteoDataXL has highly developed and tested gap-filling features. It chooses the best possible gap-filling method depending on the type of meteo parameter, gap length, and available data (e.g. whether you have downloaded data from nearly stations, or whether you have downloaded hourly data for multiple years for the same station. The following approach is used:
   - **Priority 1**: If available, priority is given to high quality measurements of other parameters at the same station, e.g. calculating relative himidity if both dew-point and dry-bulb temperature are measured.
   - **Priority 2**: If you have downloaded data from multiple meteo stations, then observations are transposed from from best-fit nearby stations (kriging by regression). A weighted average of up to 4 nearly stations is used (the optimum number of nearbly stations is automatically chosen to minimise error). Furthermore, the regression period is adjusted depending on the gap length: Shorter gaps have a shorter regression training period, which accounts for changes in weather regime (e.g. temperature inversion), and avoids issues of sensor recalibration, relocation of the neighbour.
