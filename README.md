@@ -1,5 +1,5 @@
 # MeteoDataXL
-MeteoDataXL is a macro-enabled Microsoft Excel workbook to access and process hourly meteorological data. It can download historical observations from Met.no (Frost API, Norway only), NIBIO (AgroMetBase API, Norway only), and Netatmo (Weather API global). Advanced quality-checking, gap-filling, and plotting.
+MeteoDataXL is a macro-enabled Microsoft Excel workbook to access and process hourly meteorological data. It can download historical observations from Met.no (Frost API, Norway only), NIBIO (AgroMetBase API, Norway only), and Netatmo (Weather API, worldwide). Advanced quality-checking, gap-filling, and plotting.
 
 ### Features:
 - **Data sources**
