@@ -1,4 +1,4 @@
-# MeteoDataXL
+# MeteoDataXL  [![DOI](https://zenodo.org/badge/216599602.svg)](https://zenodo.org/doi/10.5281/zenodo.10370454)
 MeteoDataXL is a macro-enabled Microsoft Excel workbook for hourly meteorological observations. It can download historical observations directly from selected web services (Frost & AgroMetBase in Norway, and Netatmo's Weather API worldwide). Advanced quality-checking, gap-filling, and plotting.
 
 ### Features:
@@ -69,6 +69,8 @@ Contact the author if you wish to adapt the code to connect to other APIs.
   author = {Schild, Peter G.},
   title = {{MeteoDataXL}: {Software tool to download and process hourly meteorological data}},
   howpublished = {\url{https://github.com/SchildCode/MeteoDataXL/}},
+  doi = {10.5281/zenodo.10370454},
+  url = {https://doi.org/10.5281/zenodo.10370454},
   year = {2023}
 }
 ```
