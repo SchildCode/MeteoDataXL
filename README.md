@@ -59,7 +59,7 @@ MeteoDataXL is a macro-enabled Microsoft Excel workbook for hourly meteorologica
 - Publically available data fron Netatmo API is lisenced: https://dev.netatmo.com/legal
 
 ### Author:
-MeteoDataXL written by Peter G. Schild, Oslo Metropitan University & SINTEF Community in the period 2008-2021.
+MeteoDataXL written by Peter G. Schild, Oslo Metropitan University & SINTEF Community in the period 2008-2023.
 Contact the author if you wish to adapt the code to connect to other APIs.
 
 ### BibTeX for citing MeteoDataXL
