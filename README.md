@@ -61,3 +61,14 @@ MeteoDataXL is a macro-enabled Microsoft Excel workbook for hourly meteorologica
 ### Author:
 MeteoDataXL written by Peter G. Schild, Oslo Metropitan University & SINTEF Community in the period 2008-2021.
 Contact the author if you wish to adapt the code to connect to other APIs.
+
+### BibTeX for citing EpXL
+
+```bibtex
+@Misc{Schild23,
+  author = {Schild, Peter G.},
+  title = {{MeteoDataXL}: {Software tool to download and process hourly meteorological data}},
+  howpublished = {\url{https://github.com/SchildCode/MeteoDataXL/}},
+  year = {2023}
+}
+```
